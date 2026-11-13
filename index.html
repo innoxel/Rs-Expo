@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Innoxel Pvt Ltd — The World Is Our Warehouse | 3D Global Trade</title>
+  <meta name="description" content="Innoxel Pvt Ltd - Global trade system. Cinematic 3D logistics, agricultural commodity exports, and international trade routes powered by Three.js & WebGL." />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <script type="module" crossorigin src="/assets/index-CvxV1eMx.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BMwJKa5h.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       FIXED THREE.JS WEBGL CANVAS (REAL 3D ENGINE)
+       ========================================================= -->
+  <div id="webgl-viewport-canvas"></div>
+
+  <!-- =========================================================
+       MINIMALIST TRANSPARENT NAVBAR
+       ========================================================= -->
+  <header class="navbar" id="main-nav">
+    <div class="nav-container">
+      <a href="#section-hero" class="brand-wrap">
+        <img src="/innoxel-logo-dark.png" alt="Innoxel Pvt Ltd" class="brand-logo-img" onerror="this.src='/innoxel-logo-original.jpg'" />
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#section-hero" class="active" onclick="event.preventDefault(); window.innoxelApp.scrollToSection('section-hero')">Home</a></li>
+          <li><a href="#section-network" onclick="event.preventDefault(); window.innoxelApp.scrollToSection('section-network')">Network</a></li>
+          <li><a href="#section-logistics" onclick="event.preventDefault(); window.innoxelApp.scrollToSection('section-logistics')">Logistics</a></li>
+          <li><a href="#section-products" onclick="event.preventDefault(); window.innoxelApp.scrollToSection('section-products')">Products</a></li>
+          <li><a href="#section-journey" onclick="event.preventDefault(); window.innoxelApp.scrollToSection('section-journey')">Journey</a></li>
+          <li><a href="#section-footer" onclick="event.preventDefault(); window.innoxelApp.scrollToSection('section-footer')">Resources</a></li>
+        </ul>
+      </nav>
+
+      <button class="btn-start-trade-nav" onclick="window.innoxelApp.openInquiryModal()">
+        <span>Start A Trade →</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       SCROLL STORYTELLING CONTAINER (0% - 100% TIMELINE)
+       ========================================================= -->
+  <div id="scroll-story-container">
+
+    <!-- 0%–20%: HERO SCENE (EARTH IN SPACE) -->
+    <section class="story-section" id="section-hero">
+      <div class="story-content-box">
+        <div class="label-pill blue">The World Is Our Warehouse</div>
+        <h1 class="hero-title-massive">
+          WE MOVE<br />THE WORLD
+        </h1>
+        <p class="hero-subtitle">
+          Global sourcing. Global logistics. Global possibilities.
+        </p>
+        <button class="btn-hero-explore" onclick="window.innoxelApp.exploreNetwork()">
+          <span>Explore Global Network →</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 20%–40%: INTERACTIVE GLOBE & TRADE ROUTES -->
+    <section class="story-section" id="section-network">
+      <div class="story-content-box">
+        <div class="label-pill gold">Interactive Global System</div>
+        <h2 class="section-headline">
+          Connected Continents. Dynamic Trade.
+        </h2>
+        <p class="section-description">
+          Rotate the globe to explore live international maritime corridors. Moving light particles trace high-frequency agro and industrial supply chains.
+        </p>
+        <div style="font-size: 0.8rem; font-family: 'JetBrains Mono', monospace; color: var(--text-dim);">
+          [ DRAG TO ROTATE GLOBE • HOVER / CLICK PORTS FOR DETAILS ]
+        </div>
+      </div>
+    </section>
+
+    <!-- 40%–60%: DIVE INTO LOGISTICS NETWORK (OCEAN FLEET) -->
+    <section class="story-section" id="section-logistics">
+      <div class="story-content-box">
+        <div class="label-pill blue">Multimodal Infrastructure</div>
+        <h2 class="section-headline">
+          From Origin To Destination.
+        </h2>
+        <p class="section-description">
+          Every shipment. Every market. Every connection.
+        </p>
+
+        <div class="logistics-grid">
+          <div class="logistics-card">
+            <div class="logistics-icon">🚢</div>
+            <h3>Ocean Freight Fleet</h3>
+            <p>Direct slot allocations with top global liner carriers. Heavy dry boxes and bulk agro carriers.</p>
+          </div>
+          <div class="logistics-card">
+            <div class="logistics-icon">❄️</div>
+            <h3>Smart Reefer Cold-Chain</h3>
+            <p>Precision controlled atmosphere (+4°C) safeguarding fresh farm produce and perishables.</p>
+          </div>
+          <div class="logistics-card">
+            <div class="logistics-icon">✈️</div>
+            <h3>Priority Air Cargo</h3>
+            <p>24-48 hour airport-to-airport express transfers for time-critical spices and harvests.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 60%–80%: 3D FLOATING PRODUCTS GALLERY -->
+    <section class="story-section" id="section-products">
+      <div class="story-content-box">
+        <div class="label-pill gold">What Moves Through Our Network</div>
+        <h2 class="section-headline">
+          Precision Commodities In 3D.
+        </h2>
+        <p class="section-description">
+          Explore the tangible cargo moving continuously across our global corridors. Rotate and inspect in real 3D.
+        </p>
+
+        <div class="products-3d-grid">
+          <div class="product-item-box" onclick="window.innoxelApp.inspectProduct('container')">
+            <div class="product-3d-glyph">📦</div>
+            <h4>40ft Reefer Container</h4>
+            <p>Controlled atmosphere intermodal cold-chain unit.</p>
+            <span class="btn-view-3d-prod">Inspect 3D Specs →</span>
+          </div>
+
+          <div class="product-item-box" onclick="window.innoxelApp.inspectProduct('machinery')">
+            <div class="product-3d-glyph">⚙️</div>
+            <h4>Precision Machinery</h4>
+            <p>Heavy agricultural irrigation and processing turbines.</p>
+            <span class="btn-view-3d-prod">Inspect 3D Specs →</span>
+          </div>
+
+          <div class="product-item-box" onclick="window.innoxelApp.inspectProduct('agro')">
+            <div class="product-3d-glyph">🌾</div>
+            <h4>1121 Basmati Rice</h4>
+            <p>Laser Sortex graded long-grain commodity staple.</p>
+            <span class="btn-view-3d-prod">Inspect 3D Specs →</span>
+          </div>
+
+          <div class="product-item-box" onclick="window.innoxelApp.inspectProduct('electronics')">
+            <div class="product-3d-glyph">⚡</div>
+            <h4>Electronics Freight</h4>
+            <p>High-value industrial electronics and sensor crates.</p>
+            <span class="btn-view-3d-prod">Inspect 3D Specs →</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 80%–100%: CINEMATIC SHIPMENT JOURNEY & FINAL SCENE -->
+    <section class="story-section" id="section-journey">
+      <div class="story-content-box">
+        <div class="label-pill blue">Cinematic Simulation</div>
+        <h2 class="section-headline" style="margin-bottom: 8px;">
+          Follow The Journey.
+        </h2>
+        <p class="section-description" style="margin-bottom: 16px;">
+          Select origin &amp; destination, then launch the cinematic tracking sequence.
+        </p>
+
+        <!-- Interactive Journey Chooser -->
+        <div class="journey-cinema-bar">
+          <div>
+            <select id="journey-from">
+              <option value="mumbai" selected>Origin: Mumbai, India</option>
+              <option value="santos">Origin: Santos, Brazil</option>
+            </select>
+          </div>
+          <div>
+            <select id="journey-to">
+              <option value="rotterdam" selected>Destination: Rotterdam, EU</option>
+              <option value="jebelali">Destination: Jebel Ali, Dubai</option>
+              <option value="newyork">Destination: New York, USA</option>
+            </select>
+          </div>
+          <button class="btn-run-journey-movie" onclick="window.innoxelApp.runJourneyMovie()">
+            <span>Launch 🚢</span>
+          </button>
+        </div>
+
+        <!-- Telemetry HUD -->
+        <div class="journey-cinema-hud" style="margin-bottom: 24px;">
+          <div class="cinema-col">
+            <div class="lbl">ORIGIN HUB</div>
+            <div class="val" id="cinema-origin">Nhava Sheva (JNPT), India</div>
+          </div>
+          <div class="cinema-col">
+            <div class="lbl">LOGISTICS MODE</div>
+            <div class="val">40ft Reefer (+4.0°C)</div>
+          </div>
+          <div class="cinema-col">
+            <div class="lbl">DISCHARGE PORT</div>
+            <div class="val" id="cinema-dest">Port of Rotterdam, Netherlands</div>
+          </div>
+          <div class="cinema-col">
+            <div class="lbl">STATUS</div>
+            <div class="val" id="cinema-status" style="color: #00ff88;">Ready For Voyage</div>
+          </div>
+        </div>
+
+        <!-- Final CTA -->
+        <div class="final-scene-wrap" style="margin-top: 0; padding-top: 20px;">
+          <h2 class="final-scene-title" style="font-size: 2.4rem; margin-bottom: 10px;">
+            WHERE SHOULD WE TAKE<br />YOUR BUSINESS NEXT?
+          </h2>
+          <button class="btn-final-cta" onclick="window.innoxelApp.openInquiryModal()">
+            <span>Start A Trade →</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESOURCES & FOOTER SECTION -->
+    <section class="story-section" id="section-footer">
+      <div class="story-content-box" style="max-width: 1000px;">
+        <div class="label-pill gold">Essential Portals</div>
+        <h2 class="section-headline">
+          Global Trade Resources.
+        </h2>
+        <p class="section-description">
+          Official portals for agricultural exports, compliance, and government schemes.
+        </p>
+
+        <div class="resources-grid">
+          <div class="resource-card">
+            <h4>Trade & Export Intelligence</h4>
+            <ul>
+              <li><a href="https://agriexchange.apeda.gov.in/India/GenerateAPEDAProductReport/Index" target="_blank">APEDA AgriExchange ↗</a></li>
+              <li><a href="https://dfpd.gov.in/import-exports/en" target="_blank">DFPD Import/Export ↗</a></li>
+              <li><a href="https://www.ibef.org/exports/oilseeds-industry-india" target="_blank">IBEF Oilseeds Industry ↗</a></li>
+            </ul>
+          </div>
+          <div class="resource-card">
+            <h4>Commodities & Farmers</h4>
+            <ul>
+              <li><a href="https://agmarknet.gov.in/home" target="_blank">Agmarknet Prices ↗</a></li>
+              <li><a href="http://www.farmersstop.com" target="_blank">Farmers Stop ↗</a></li>
+            </ul>
+          </div>
+          <div class="resource-card">
+            <h4>Compliance & Schemes</h4>
+            <ul>
+              <li><a href="https://taxclue.in/govt-schemes-guide" target="_blank">Govt Schemes Guide ↗</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Innoxel Pvt Ltd. The World Is Our Warehouse.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Right-Side Vertical Dot Navigation -->
+  <nav class="scroll-dots-nav" aria-label="Section Navigation">
+    <button class="scroll-dot active" title="Hero" onclick="window.innoxelApp.scrollToSection('section-hero')"></button>
+    <button class="scroll-dot" title="Network" onclick="window.innoxelApp.scrollToSection('section-network')"></button>
+    <button class="scroll-dot" title="Logistics" onclick="window.innoxelApp.scrollToSection('section-logistics')"></button>
+    <button class="scroll-dot" title="Products" onclick="window.innoxelApp.scrollToSection('section-products')"></button>
+    <button class="scroll-dot" title="Journey" onclick="window.innoxelApp.scrollToSection('section-journey')"></button>
+    <button class="scroll-dot" title="Resources" onclick="window.innoxelApp.scrollToSection('section-footer')"></button>
+  </nav>
+
+  <!-- Floating Port Information Card (Populated dynamically on Port Hover/Click) -->
+  <div class="port-hover-card" id="port-card">
+    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+      <span class="label-pill blue" id="card-port-role" style="margin-bottom: 8px;">GLOBAL GATEWAY</span>
+      <span id="card-port-country" style="font-size: 0.8rem; color: var(--text-dim);">India</span>
+    </div>
+    <h4 id="card-port-name" style="font-size: 1.3rem; margin-bottom: 8px;">Nhava Sheva / Mumbai</h4>
+    <div class="port-meta-line">
+      <span class="lbl">Key Commodities:</span>
+      <span class="val" id="card-port-products">Basmati Rice, Spices, Grains, Mangoes</span>
+    </div>
+    <div class="port-meta-line">
+      <span class="lbl">Logistics Mode:</span>
+      <span class="val" id="card-port-mode">Ocean Reefer / Dry FCL / Air Priority</span>
+    </div>
+  </div>
+
+  <!-- Product Specifications 3D Modal -->
+  <div class="app-modal" id="modal-product-3d">
+    <div class="modal-backdrop" onclick="document.getElementById('modal-product-3d').classList.remove('active')"></div>
+    <div class="modal-sheet">
+      <button class="modal-close-btn" onclick="document.getElementById('modal-product-3d').classList.remove('active')">&times;</button>
+      <span class="label-pill gold" id="modal-3d-cat">AGRICULTURAL COMMODITY</span>
+      <h3 id="modal-3d-title" style="font-size: 1.6rem; margin: 8px 0 16px;">Traditional 1121 Basmati Rice</h3>
+      <div id="modal-3d-body" style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 24px;"></div>
+      <button class="btn-start-trade-nav" style="width: 100%; justify-content: center; height: 48px;" onclick="document.getElementById('modal-product-3d').classList.remove('active'); window.innoxelApp.openInquiryModal();">
+        <span>Request Official Specification & Quote →</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Inquiry Sheet Modal -->
+  <div class="app-modal" id="modal-inquiry">
+    <div class="modal-backdrop" onclick="document.getElementById('modal-inquiry').classList.remove('active')"></div>
+    <div class="modal-sheet">
+      <button class="modal-close-btn" onclick="document.getElementById('modal-inquiry').classList.remove('active')">&times;</button>
+      <span class="label-pill blue">Commercial Inquiry</span>
+      <h3 style="font-size: 1.8rem; margin: 6px 0 20px;">Start A Global Trade</h3>
+      
+      <form onsubmit="event.preventDefault(); window.innoxelApp.submitInquiry();">
+        <div style="margin-bottom: 14px;">
+          <label style="display: block; font-size: 0.7rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; color: var(--text-dim); margin-bottom: 6px;">Your Name</label>
+          <input type="text" id="inq-name" placeholder="John Doe" required style="width: 100%; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-hairline); border-radius: 8px; color: #fff; padding: 12px; font-family: inherit;" />
+        </div>
+        <div style="margin-bottom: 14px;">
+          <label style="display: block; font-size: 0.7rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; color: var(--text-dim); margin-bottom: 6px;">Company / Organization</label>
+          <input type="text" id="inq-company" placeholder="EuroAgri GMBH" required style="width: 100%; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-hairline); border-radius: 8px; color: #fff; padding: 12px; font-family: inherit;" />
+        </div>
+        <div style="margin-bottom: 14px;">
+          <label style="display: block; font-size: 0.7rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; color: var(--text-dim); margin-bottom: 6px;">Business Email</label>
+          <input type="email" id="inq-email" placeholder="trade@company.com" required style="width: 100%; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-hairline); border-radius: 8px; color: #fff; padding: 12px; font-family: inherit;" />
+        </div>
+        <div style="margin-bottom: 20px;">
+          <label style="display: block; font-size: 0.7rem; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; color: var(--text-dim); margin-bottom: 6px;">Cargo Specification & Target Port</label>
+          <input type="text" id="inq-cargo" placeholder="e.g. 50 MT Basmati Rice to Rotterdam" required style="width: 100%; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-hairline); border-radius: 8px; color: #fff; padding: 12px; font-family: inherit;" />
+        </div>
+        <button type="submit" class="btn-start-trade-nav" style="width: 100%; justify-content: center; height: 50px;">
+          <span>Submit Official Inquiry →</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
